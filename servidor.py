@@ -1,5 +1,6 @@
 import socket # Modulo para trabajar con sockets (enviar/recibir datos por red)
 import select # Modulo para monitorear vareios sockets al mismo tiempo sin usar hilos
+import os
 
 # IP del servidor
 IP = "127.0.0.1"
@@ -112,3 +113,5 @@ while True:
         print("No quedan clientes conectados. Cerrando servidor...")
         server_socket.close()
         exit()
+
+        os._exit(0)  # Cerramos completamente
