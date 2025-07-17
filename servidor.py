@@ -107,3 +107,8 @@ while True:
             cliente.close()
             sockets_list.remove(cliente)
             del usuarios[cliente]
+
+      if len(usuarios) == 0:
+        print("No quedan clientes conectados. Cerrando servidor...")
+        server_socket.close()
+        exit()
