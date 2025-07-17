@@ -20,6 +20,16 @@ server_socket.listen()
 
 print(f"Servidor corriendo en {IP}: {PORT}. Esperando conexiones...")
 
+# Esperamos a que el cliente se conecte (bloquea el programa hasta que alguien se conecte)
 client_socket, client_address = server_socket.accept()
-
 print(f"Conexión recibida de {client_address}")
+
+# Recibimos el mensaje del cliente (hasta 1024 bytes)
+mensaje = client_socket.recv(1024).decode("utf-8")
+
+# Mostramos el mensaje en consola
+print(f"Mensaje recibido: {mensaje}")
+
+# Cerramos la conexión
+client_socket.close()
+print("Cliente desconectado")
