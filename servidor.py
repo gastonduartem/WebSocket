@@ -10,6 +10,7 @@ PORT = 1234
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # Permitimos reusar el puerto rápidamente si el servidor se reinicia (evita error "Address already in use")
+# Cambiamos opciones del socket, Nivel: opciones generales del socket, Queremos reusar la dirección (IP + puerto), 
 server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
 # Enlazamos el socket a la IP y puerto de elección
@@ -48,6 +49,7 @@ while True:
     try:
         # select.select se queda expectante hasta que uno de los sockets tenga algo para leer
         sockets_leibles, _, excepcionales = select.select(sockets_list, [], sockets_list)
+        # Exception es la clase base de todos los errores en Python,  guarda el detalle del error en la variable e para poder imprimirlo y analizarlo
     except Exception as e:
         print(f"⚠️ Error en select: {e}")
         continue
