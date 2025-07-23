@@ -10,7 +10,7 @@ PORT = 1234
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # Permitimos reusar el puerto rápidamente si el servidor se reinicia (evita error "Address already in use")
-# Cambiamos opciones del socket, Nivel: opciones generales del socket, Queremos reusar la dirección (IP + puerto), 
+# Cambiamos opciones del socket, Nivel: opciones generales del socket, Queremos reusar la dirección (IP + puerto), Lo activamos (True)
 server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
 # Enlazamos el socket a la IP y puerto de elección
