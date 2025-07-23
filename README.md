@@ -47,3 +47,10 @@ Me di cuenta que no hace falta usar cosas pesadas como Flask o bibliotecas exter
 Sobrevivió porque la pensé simple pero sólida. El servidor usa select, así que no se traba cuando hay muchos clientes. Los clientes usan threading, así que podés escribir y recibir mensajes al mismo tiempo sin bloquear nada.
 
 También puse control de errores, así que si un cliente se desconecta, el servidor no se cae. Y si pasa algo raro, se cierra todo limpio.
+
+🔥 ¿Qué aprendiste cuando todo se rompió?
+Aprendí que cuando trabajás con sockets, todo se puede romper en cualquier momento: conexiones que se cortan, sockets que se cierran mal, errores por no recibir datos...
+
+Pero también aprendí a no entrar en pánico. Ahora sé cómo detectar esos problemas, cómo cerrarlos bien, y cómo hacer que el programa no explote.
+
+Además, entendí mejor cómo usar select y threading de forma práctica. No es solo teoría, ahora los usé para algo real.
