@@ -1,6 +1,6 @@
 # WebSocket# 🧠 Challenge 4 – Comunicación en Tiempo Real con Sockets
 
-Este proyecto fue desarrollado como parte del Challenge 4, cuyo objetivo era diseñar una aplicación de chat funcional, estable y en tiempo real utilizando únicamente sockets, sin frameworks ni bibliotecas externas.
+Este proyecto es un chat por terminal hecho a puro pulmón con sockets, select y threading. Lo hice como parte del Challenge 4 del curso, donde la idea era entender cómo funcionan los web sockets sin usar ninguna biblioteca externa ni frameworks mágicos.
 
 El desafío consistía en reconstruir un sistema de comunicación desde cero, emulando un escenario donde las redes modernas han colapsado y solo quedan las herramientas más esenciales: terminal, sockets y código limpio.
 

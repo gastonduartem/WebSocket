@@ -122,13 +122,3 @@ while True:
         if socket_problematico in usuarios:
             del usuarios[socket_problematico]
         socket_problematico.close()
-
-    # Si ya no quedan usuarios conectados, cerramos el servidor
-    if len(usuarios) == 0:
-        print("No quedan clientes conectados. Cerrando servidor...")
-        for s in sockets_list:
-            try:
-                s.close()
-            except:
-                pass
-        exit()
