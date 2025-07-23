@@ -38,6 +38,12 @@ Funciona fluido, en tiempo real.
 
 Lo probé con varios clientes y aguanta bien.
 
-Conclusión
+💬 ¿Quién sos después de este reto?
+Después de este proyecto, siento que entiendo mucho mejor cómo se comunican las computadoras entre sí. Ya no veo los chats o juegos online como algo mágico: ahora sé que por detrás hay sockets, mensajes, hilos y muchas cosas que pueden romperse si no las manejás bien.
 
-Este proyecto me hizo entender como funcionan (en parte) las redes sociales hoy día. Cosas tan comunes como esa, que no cuenta nos damos y ahora entiendo más del funcionamiento de las mismas.
+Me di cuenta que no hace falta usar cosas pesadas como Flask o bibliotecas externas para que algo funcione bien. Con lo básico y con cabeza se puede construir algo real.
+
+⚙️ ¿Cómo sobrevivió tu aplicación?
+Sobrevivió porque la pensé simple pero sólida. El servidor usa select, así que no se traba cuando hay muchos clientes. Los clientes usan threading, así que podés escribir y recibir mensajes al mismo tiempo sin bloquear nada.
+
+También puse control de errores, así que si un cliente se desconecta, el servidor no se cae. Y si pasa algo raro, se cierra todo limpio.
