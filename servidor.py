@@ -99,7 +99,7 @@ while True:
             nombre = usuarios.get(socket_notificado, "Desconocido")
             mensaje_completo = f"{nombre}: {mensaje}"
             print(f"{mensaje_completo}")
-
+  
             # Reenviamos el mensaje a todos los demás clientes (broadcast)
             for cliente in list(usuarios):
                 if cliente != socket_notificado:
