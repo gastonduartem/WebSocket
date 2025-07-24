@@ -1,4 +1,4 @@
-import socket  # Módulo para trabajar con sockets (enviar/recibir datos por red) punto de conexion de comunicacion
+import socket  # Módulo para trabajar con sockets (enviar/recibir datos por red) punto de conexión de comunicación
 import select  # Módulo para monitorear varios sockets al mismo tiempo sin usar hilos
 
 # IP del servidor
@@ -116,11 +116,11 @@ while True:
                             del usuarios[cliente]
 
     # Manejamos los sockets que presentan errores
-    for socket_problematico in excepcionales:
-        nombre = usuarios.get(socket_problematico, "Desconocido")
+    for socket_problema in excepcionales:
+        nombre = usuarios.get(socket_problema, "Desconocido")
         print(f"⚠️ Socket con error: {nombre}")
-        if socket_problematico in sockets_list:
-            sockets_list.remove(socket_problematico)
-        if socket_problematico in usuarios:
-            del usuarios[socket_problematico]
-        socket_problematico.close()
+        if socket_problema in sockets_list:
+            sockets_list.remove(socket_problema)
+        if socket_problema in usuarios:
+            del usuarios[socket_problema]
+        socket_problema.close()
