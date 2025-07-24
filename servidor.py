@@ -1,4 +1,4 @@
-import socket  # Módulo para trabajar con sockets (enviar/recibir datos por red)
+import socket  # Módulo para trabajar con sockets (enviar/recibir datos por red) punto de conexion de comunicacion
 import select  # Módulo para monitorear varios sockets al mismo tiempo sin usar hilos
 
 # IP del servidor
